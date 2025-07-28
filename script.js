@@ -3,7 +3,6 @@ const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
 const srOnlyText = document.getElementById('srOnlyText');
 
-// Check for saved theme preference or respect system preference
 const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.setAttribute('data-theme', currentTheme);
 updateThemeIcon(currentTheme);
@@ -29,7 +28,6 @@ function updateThemeIcon(theme) {
 
 // Scroll Progress Indicator
 const scrollProgressBar = document.getElementById('scrollProgressBar');
-
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const docHeight = document.body.offsetHeight - window.innerHeight;
@@ -61,14 +59,14 @@ window.addEventListener('scroll', () => {
 
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Adjust for fixed header
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
         }
@@ -83,47 +81,51 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
     });
 });
 
-// Project Modals
+// Project Modals Logic
 const modalTriggers = document.querySelectorAll('[data-modal-target]');
+const modalCloseButtons = document.querySelectorAll('.modal-close');
 const modals = document.querySelectorAll('.modal');
-const modalCloses = document.querySelectorAll('.modal-close');
 
+// Open modal
 modalTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
-        const modalId = trigger.dataset.modalTarget;
-        const modal = document.querySelector(modalId);
+        const targetId = trigger.getAttribute('data-modal-target');
+        const modal = document.querySelector(targetId);
         if (modal) {
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
     });
 });
 
-modalCloses.forEach(close => {
-    close.addEventListener('click', () => {
-        modals.forEach(modal => {
-            modal.classList.remove('active');
-        });
-        document.body.style.overflow = ''; // Re-enable scrolling
+// Close modal via close button
+modalCloseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        closeAllModals();
     });
 });
 
-// Close modal when clicking on overlay
+// Close modal by clicking outside
 modals.forEach(modal => {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = ''; // Re-enable scrolling
+            closeAllModals();
         }
     });
 });
+
+function closeAllModals() {
+    modals.forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
 
 // Back to Top Button
 const backToTopButton = document.querySelector('.back-to-top');
