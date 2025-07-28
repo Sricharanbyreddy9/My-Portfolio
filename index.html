@@ -1519,131 +1519,213 @@
     </div>
 </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Projects</h2>
-            </div>
-            <div class="projects-grid">
-                 <!-- RAGCare Project -->
-                <div class="project-card">
-                    <div class="project-image"><i class="fas fa-robot"></i></div>
-                    <div class="project-content">
-                        <h3 class="project-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
-                        <p class="project-description">An intelligent, document-aware chatbot leveraging Retrieval-Augmented Generation (RAG) for accurate, context-based medical assistance.</p>
-                        <div class="project-tech"><span class="tech-tag">Flask</span><span class="tech-tag">Python</span><span class="tech-tag">RAG</span><span class="tech-tag">LLMs</span><span class="tech-tag">FAISS</span><span class="tech-tag">SentenceTransformers</span></div>
-                        <button class="btn btn-outline project-btn" data-modal-target="#modal-ragcare">View Details</button>
-                    </div>
-                </div>
-                 <!-- AthleteSphere Project -->
-                <div class="project-card">
-                    <div class="project-image"><i class="fas fa-medal"></i></div>
-                    <div class="project-content">
-                        <h3 class="project-title">AthleteSphere - Sports Analytics DB</h3>
-                        <p class="project-description">A BCNF-normalized PostgreSQL database for Olympic data with REST APIs and Power BI dashboards.</p>
-                        <div class="project-tech"><span class="tech-tag">Flask</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">REST API</span><span class="tech-tag">SQLAlchemy</span></div>
-                        <button class="btn btn-outline project-btn" data-modal-target="#modal-athletesphere">View Details</button>
-                    </div>
-                </div>
-                 <!-- Fine-Grained Recognition Project -->
-                <div class="project-card">
-                    <div class="project-image"><i class="fas fa-eye"></i></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Advancing Fine-Grained Recognition</h3>
-                        <p class="project-description">Combined CNN saliency maps with HOG descriptors to improve badge recognition accuracy using MLP.</p>
-                        <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">CNN</span><span class="tech-tag">HOG</span><span class="tech-tag">MLP</span><span class="tech-tag">Grad-CAM</span></div>
-                        <button class="btn btn-outline project-btn" data-modal-target="#modal-finegrained">View Details</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- RAGCare Project Modal -->
-    <div class="modal" id="modal-ragcare">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-content">
-                <h3 class="modal-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
-                <p class="modal-description"><strong>RAGCare</strong> is an intelligent, document-aware chatbot built using Flask that leverages Retrieval-Augmented Generation (RAG) to provide accurate, context-based medical assistance.</p>
-                <h4 class="modal-subtitle">Core Functionality</h4>
-                <ul>
-                    <li><strong>Document Upload & Processing:</strong> Users can upload medical documents (PDFs like reports, prescriptions, health articles). These documents are automatically chunked and processed.</li>
-                    <li><strong>Vector Storage:</strong> Processed text chunks are embedded using SentenceTransformers and stored in a FAISS vector index for efficient similarity search.</li>
-                    <li><strong>Intelligent Retrieval:</strong> When a user asks a question, RAGCare retrieves the most relevant text chunks from the uploaded or preloaded documents.</li>
-                    <li><strong>Contextual Generation:</strong> The retrieved context is combined with the user's query and passed to a Large Language Model (LLM) like GPT or LLaMA (via Groq API) to generate a grounded, informative response.</li>
-                </ul>
-                 <h4 class="modal-subtitle">Key Features</h4>
-                <ul>
-                    <li>Support for multiple LLM backends (OpenAI, Groq LLaMA).</li>
-                    <li>Chat history and export functionality.</li>
-                    <li>PDF preview capability.</li>
-                    <li>Modern UI with responsive design and dark mode.</li>
-                    <li>Demonstrates the power of GenAI and RAG pipelines in bridging unstructured medical documents with conversational AI.</li>
-                </ul>
-                <div class="modal-tech">
-                    <h4 class="modal-subtitle">Tech Stack:</h4>
-                    <div class="tech-tags"><span class="tech-tag">Flask</span><span class="tech-tag">Python</span><span class="tech-tag">Retrieval-Augmented Generation (RAG)</span><span class="tech-tag">Large Language Models (LLMs)</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">Groq API</span><span class="tech-tag">FAISS</span><span class="tech-tag">SentenceTransformers</span><span class="tech-tag">HTML/CSS/JS</span></div>
-                </div>
-                <div class="modal-links">
-                    <a href="https://github.com/Charanbyreddy/RAGCare-Retrieval-Augmented-Healthcare-Assistant." target="_blank" class="btn btn-outline modal-link"><i class="fab fa-github"></i> GitHub Repo</a>
-                </div>
-            </div>
-        </div>
+  <!-- Projects Section -->
+<section id="projects" class="projects-section section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Projects</h2>
     </div>
+    <div class="projects-grid">
 
-     <!-- AthleteSphere Project Modal -->
-    <div class="modal" id="modal-athletesphere">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-content">
-                <h3 class="modal-title">AthleteSphere - Optimized Sports Analytics DB</h3>
-                <p class="modal-description">A database system designed to manage sports data efficiently, enabling analysis and predictive modeling for sports competitions.</p>
-                <h4 class="modal-subtitle">Key Features</h4>
-                <ul>
-                    <li>Structured a BCNF-normalized PostgreSQL schema via SQLAlchemy and Flask.</li>
-                    <li>Enabled versioned access to 120+ years of Olympic records through modular API layers.</li>
-                    <li>Streamed indexed aggregates to REST endpoints powering Power BI dashboards.</li>
-                    <li>Maintained sub-150ms latency on complex 8-way joins and reduced drilldown lag by 70%.</li>
-                </ul>
-                <div class="modal-tech">
-                    <h4 class="modal-subtitle">Tech Stack:</h4>
-                    <div class="tech-tags"><span class="tech-tag">Flask</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">REST API</span><span class="tech-tag">SQLAlchemy</span><span class="tech-tag">Database Design</span><span class="tech-tag">Normalization</span></div>
-                </div>
-                <div class="modal-links">
-                    <a href="https://github.com/Charanbyreddy/AthleteSphere-Optimized-Sports-Analytics-DB" target="_blank" class="btn btn-outline modal-link"><i class="fab fa-github"></i> GitHub Repo</a>
-                </div>
-            </div>
+      <!-- RAGCare Project -->
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-robot"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
+          <p class="project-description">An intelligent, document-aware chatbot leveraging Retrieval-Augmented Generation (RAG) for accurate, context-based medical assistance.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">FAISS</span>
+            <span class="tech-tag">SentenceTransformers</span>
+          </div>
+          <button class="btn btn-outline project-btn" data-modal-target="#modal-ragcare">View Details</button>
         </div>
-    </div>
+      </div>
 
-     <!-- Fine-Grained Recognition Project Modal -->
-    <div class="modal" id="modal-finegrained">
-        <div class="modal-overlay"></div>
+      <div id="modal-ragcare" class="modal">
         <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-content">
-                <h3 class="modal-title">Advancing Fine-Grained Recognition Through Weakly Supervised Learning</h3>
-                <p class="modal-description">This project aims to enhance fine-grain recognition by iteratively refining models and comparing their performance.</p>
-                <h4 class="modal-subtitle">Approach & Results</h4>
-                <ul>
-                    <li>Combined Grad-CAM saliency maps from CNN layers with HOG-based spatial descriptors.</li>
-                    <li>Aligned activation peaks with handcrafted signals to train an MLP classifier.</li>
-                    <li>Improved badge recognition accuracy to 92.6%.</li>
-                </ul>
-                <div class="modal-tech">
-                    <h4 class="modal-subtitle">Tech Stack:</h4>
-                    <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">CNN</span><span class="tech-tag">HOG</span><span class="tech-tag">MLP</span><span class="tech-tag">Grad-CAM</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">Computer Vision</span></div>
-                </div>
-                <div class="modal-links">
-                    <a href="https://github.com/Charanbyreddy/Advancing-Fine-Grained-Recognition-Through-Weakly-Supervised-Learning" target="_blank" class="btn btn-outline modal-link"><i class="fab fa-github"></i> GitHub Repo</a>
-                </div>
-            </div>
+          <button class="modal-close">&times;</button>
+          <h3 class="modal-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
+          <p class="modal-description">This project implements a document-aware chatbot using RAG to deliver medically accurate responses. Built using Flask, FAISS, and SentenceTransformers.</p>
         </div>
+      </div>
+
+      <!-- AthleteSphere Project -->
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-medal"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">AthleteSphere - Sports Analytics DB</h3>
+          <p class="project-description">A BCNF-normalized PostgreSQL database for Olympic data with REST APIs and Power BI dashboards.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">SQLAlchemy</span>
+          </div>
+          <button class="btn btn-outline project-btn" data-modal-target="#modal-athletesphere">View Details</button>
+        </div>
+      </div>
+
+      <div id="modal-athletesphere" class="modal">
+        <div class="modal-container">
+          <button class="modal-close">&times;</button>
+          <h3 class="modal-title">AthleteSphere - Sports Analytics DB</h3>
+          <p class="modal-description">Developed a normalized sports DB system with REST API for analytics and interactive Power BI visualizations.</p>
+        </div>
+      </div>
+
+      <!-- Fine-Grained Recognition Project -->
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-eye"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">Advancing Fine-Grained Recognition</h3>
+          <p class="project-description">Combined CNN saliency maps with HOG descriptors to improve badge recognition accuracy using MLP.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">CNN</span>
+            <span class="tech-tag">HOG</span>
+            <span class="tech-tag">MLP</span>
+            <span class="tech-tag">Grad-CAM</span>
+          </div>
+          <button class="btn btn-outline project-btn" data-modal-target="#modal-finegrained">View Details</button>
+        </div>
+      </div>
+
+      <div id="modal-finegrained" class="modal">
+        <div class="modal-container">
+          <button class="modal-close">&times;</button>
+          <h3 class="modal-title">Advancing Fine-Grained Recognition</h3>
+          <p class="modal-description">Implemented CNN saliency + HOG features to enhance recognition tasks using a fully connected MLP network with visualization through Grad-CAM.</p>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
+
+
+<style>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-tech {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-description {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.project-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  color: #fff;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+</style>
+
+<!-- Modal Scripts -->
+<script>
+    document.querySelectorAll('.project-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal-target');
+            document.querySelector(modalId).classList.add('active');
+        });
+    });
+
+    document.querySelectorAll('.modal-close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            closeBtn.closest('.modal').classList.remove('active');
+        });
+    });
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            overlay.closest('.modal').classList.remove('active');
+        });
+    });
+</script>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section section">
