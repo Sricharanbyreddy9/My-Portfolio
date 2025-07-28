@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Charan Byreddy - Fullstack Java Spring Boot Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Add EmailJS script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
+            <span class="sr-only" id="srOnlyText">Switch to Dark Mode</span>
+        </button>
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+    <!-- Floating Navigation Dots -->
+    <nav class="floating-nav" id="floatingNav">
+        <a href="#home" class="nav-dot active" data-section="home"><span class="sr-only">Home</span></a>
+        <a href="#about" class="nav-dot" data-section="about"><span class="sr-only">About</span></a>
+        <a href="#skills" class="nav-dot" data-section="skills"><span class="sr-only">Skills</span></a>
+        <a href="#experience" class="nav-dot" data-section="experience"><span class="sr-only">Experience</span></a>
+        <a href="#projects" class="nav-dot" data-section="projects"><span class="sr-only">Projects</span></a>
+        <a href="#contact" class="nav-dot" data-section="contact"><span class="sr-only">Contact</span></a>
+    </nav>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+            <a href="#" class="logo"><i class="fas fa-user-astronaut"></i>SCB</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-container container">
+    <div class="hero-content">
+      <img src="assets/cropped-IMG_9584.JPG" alt="Sri Charan Byreddy" class="profile-pic">
+      <h1 class="hero-title">Sri Charan Byreddy</h1>
+      <p class="hero-subtitle">Software Engineer</p>
+      <p class="hero-description">Software Engineer with 4+ years of experience in full-stack development, microservices, and cloud deployments using Java, React, and AWS.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary hero-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+        <a href="path/to/your/resume.pdf" class="btn btn-outline hero-btn download-btn" target="_blank"><i class="fas fa-file-download"></i> Resume</a>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+</section>
+    <!-- About Section -->
+    <section id="about" class="about-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div>
+                    <h3 class="about-heading">Crafting Digital Experiences</h3>
+                    <p class="about-paragraph">I'm a dedicated Software Engineer with experience designing and building robust, scalable web applications and backend systems. My expertise lies in leveraging modern technologies like Python, Flask, Node.js, Java, and Spring Boot to create efficient solutions.</p>
+                    <p class="about-paragraph">I focus on writing clean, maintainable code, ensuring high performance, and delivering solutions that meet real-world needs.</p>
+                </div>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="highlight-content">
+                            <h4 class="highlight-title">4+ Years Experience</h4>
+                            <p class="highlight-description">Building scalable web applications and microservices</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-users"></i></div>
+                        <div class="highlight-content">
+                            <h4 class="highlight-title">3+ Companies</h4>
+                            <p class="highlight-description">Worked with including CVS Health and Rubixe</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="highlight-content">
+                            <h4 class="highlight-title">10+ Projects</h4>
+                            <p class="highlight-description">Completed across diverse domains and technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Engineer</h3>
+                        <h4 class="timeline-subtitle">CVS Health | Remote, USA | May 2024 – Present</h4>
+                        <p class="timeline-description">Designed RESTful APIs with Spring Boot, reducing latency by 20%, and developed responsive React.js UIs that improved engagement by 15%. Deployed scalable services on AWS using Docker and Kubernetes, with CI/CD pipelines via GitHub Actions to cut release cycles by 30%. Proficient in Agile, JIRA, and system monitoring with ElasticSearch and Grafana.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Development Engineer</h3>
+                        <h4 class="timeline-subtitle">Rubixe Disruptive Technologies | Bangalore, India | Jan 2022 – Jul 2022</h4>
+                        <p class="timeline-description">Developed full-stack applications using the MERN stack, improving performance by 25%. Built responsive UIs with React.js and Redux, and implemented secure APIs with Node.js and Express.js. Integrated MongoDB for efficient data handling and collaborated with cross-functional teams to deliver high-quality solutions on time.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Junior Software Engineer</h3>
+                        <h4 class="timeline-subtitle">Hexaware Technologies | India | Jul 2020 – Dec 2021</h4>
+                        <p class="timeline-description">Built real-time financial dashboards with React and Redux, enabling dynamic data visualization. Developed Spring Boot microservices for payment workflows with high availability and integrated secure APIs using Spring Security and JWT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <<!-- Skills Section -->
+<section id="skills" class="skills-section section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="skills-summary">
+            <div class="skill-category-summary">
+                <h3 class="skill-category-title">Languages & Web Technologies</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                    <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="fab fa-js"></i> TypeScript</span>
+                    <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                    <span class="skill-tag"><i class="fas fa-code"></i> C++</span>
+                    <span class="skill-tag"><i class="fas fa-chart-bar"></i> R</span>
+                    <span class="skill-tag"><i class="fas fa-terminal"></i> Bash</span>
+                    <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+                    <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+                    <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+                    <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+                    <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="skill-tag"><i class="fas fa-exchange-alt"></i> REST APIs</span>
+                </div>
+            </div>
+
+            <div class="skill-category-summary">
+                <h3 class="skill-category-title">Databases, Cloud & DevOps</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                    <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                    <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
+                    <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                    <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+                    <span class="skill-tag"><i class="fas fa-cube"></i> Kubernetes</span>
+                    <span class="skill-tag"><i class="fas fa-sync-alt"></i> CI/CD</span>
+                    <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="skill-tag"><i class="fab fa-bitbucket"></i> Bitbucket</span>
+                    <span class="skill-tag"><i class="fab fa-github"></i> GitHub Actions</span>
+                    <span class="skill-tag"><i class="fab fa-jenkins"></i> Jenkins</span>
+                    <span class="skill-tag"><i class="fas fa-cogs"></i> Terraform</span>
+                </div>
+            </div>
+
+            <div class="skill-category-summary">
+                <h3 class="skill-category-title">Data Science, ML & Tools</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag"><i class="fas fa-calculator"></i> NumPy</span>
+                    <span class="skill-tag"><i class="fas fa-table"></i> Pandas</span>
+                    <span class="skill-tag"><i class="fas fa-brain"></i> Scikit-learn</span>
+                    <span class="skill-tag"><i class="fas fa-chart-line"></i> Matplotlib</span>
+                    <span class="skill-tag"><i class="fas fa-chart-bar"></i> Seaborn</span>
+                    <span class="skill-tag"><i class="fas fa-eye"></i> OpenCV</span>
+                    <span class="skill-tag"><i class="fas fa-comment-dots"></i> NLTK</span>
+                    <span class="skill-tag"><i class="fas fa-robot"></i> Transformers</span>
+                    <span class="skill-tag"><i class="fab fa-jira"></i> JIRA</span>
+                    <span class="skill-tag"><i class="fas fa-tasks"></i> Agile</span>
+                    <span class="skill-tag"><i class="fas fa-users"></i> Scrum</span>
+                    <span class="skill-tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-grid">
+                 <!-- RAGCare Project -->
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-robot"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
+                        <p class="project-description">An intelligent, document-aware chatbot leveraging Retrieval-Augmented Generation (RAG) for accurate, context-based medical assistance.</p>
+                        <div class="project-tech"><span class="tech-tag">Flask</span><span class="tech-tag">Python</span><span class="tech-tag">RAG</span><span class="tech-tag">LLMs</span><span class="tech-tag">FAISS</span><span class="tech-tag">SentenceTransformers</span></div>
+                        <button class="btn btn-outline project-btn" data-modal-target="#modal-ragcare">View Details</button>
+                    </div>
+                </div>
+                 <!-- AthleteSphere Project -->
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-medal"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">AthleteSphere - Sports Analytics DB</h3>
+                        <p class="project-description">A BCNF-normalized PostgreSQL database for Olympic data with REST APIs and Power BI dashboards.</p>
+                        <div class="project-tech"><span class="tech-tag">Flask</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">REST API</span><span class="tech-tag">SQLAlchemy</span></div>
+                        <button class="btn btn-outline project-btn" data-modal-target="#modal-athletesphere">View Details</button>
+                    </div>
+                </div>
+                 <!-- Fine-Grained Recognition Project -->
+                <div class="project-card">
+                    <div class="project-image"><i class="fas fa-eye"></i></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Advancing Fine-Grained Recognition</h3>
+                        <p class="project-description">Combined CNN saliency maps with HOG descriptors to improve badge recognition accuracy using MLP.</p>
+                        <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">CNN</span><span class="tech-tag">HOG</span><span class="tech-tag">MLP</span><span class="tech-tag">Grad-CAM</span></div>
+                        <button class="btn btn-outline project-btn" data-modal-target="#modal-finegrained">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- RAGCare Project Modal -->
+    <div class="modal" id="modal-ragcare">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h3 class="modal-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
+                <p class="modal-description"><strong>RAGCare</strong> is an intelligent, document-aware chatbot built using Flask that leverages Retrieval-Augmented Generation (RAG) to provide accurate, context-based medical assistance.</p>
+                <h4 class="modal-subtitle">Core Functionality</h4>
+                <ul>
+                    <li><strong>Document Upload & Processing:</strong> Users can upload medical documents (PDFs like reports, prescriptions, health articles). These documents are automatically chunked and processed.</li>
+                    <li><strong>Vector Storage:</strong> Processed text chunks are embedded using SentenceTransformers and stored in a FAISS vector index for efficient similarity search.</li>
+                    <li><strong>Intelligent Retrieval:</strong> When a user asks a question, RAGCare retrieves the most relevant text chunks from the uploaded or preloaded documents.</li>
+                    <li><strong>Contextual Generation:</strong> The retrieved context is combined with the user's query and passed to a Large Language Model (LLM) like GPT or LLaMA (via Groq API) to generate a grounded, informative response.</li>
+                </ul>
+                 <h4 class="modal-subtitle">Key Features</h4>
+                <ul>
+                    <li>Support for multiple LLM backends (OpenAI, Groq LLaMA).</li>
+                    <li>Chat history and export functionality.</li>
+                    <li>PDF preview capability.</li>
+                    <li>Modern UI with responsive design and dark mode.</li>
+                    <li>Demonstrates the power of GenAI and RAG pipelines in bridging unstructured medical documents with conversational AI.</li>
+                </ul>
+                <div class="modal-tech">
+                    <h4 class="modal-subtitle">Tech Stack:</h4>
+                    <div class="tech-tags"><span class="tech-tag">Flask</span><span class="tech-tag">Python</span><span class="tech-tag">Retrieval-Augmented Generation (RAG)</span><span class="tech-tag">Large Language Models (LLMs)</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">Groq API</span><span class="tech-tag">FAISS</span><span class="tech-tag">SentenceTransformers</span><span class="tech-tag">HTML/CSS/JS</span></div>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/Charanbyreddy/RAGCare-Retrieval-Augmented-Healthcare-Assistant." target="_blank" class="btn btn-outline modal-link"><i class="fab fa-github"></i> GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- AthleteSphere Project Modal -->
+    <div class="modal" id="modal-athletesphere">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h3 class="modal-title">AthleteSphere - Optimized Sports Analytics DB</h3>
+                <p class="modal-description">A database system designed to manage sports data efficiently, enabling analysis and predictive modeling for sports competitions.</p>
+                <h4 class="modal-subtitle">Key Features</h4>
+                <ul>
+                    <li>Structured a BCNF-normalized PostgreSQL schema via SQLAlchemy and Flask.</li>
+                    <li>Enabled versioned access to 120+ years of Olympic records through modular API layers.</li>
+                    <li>Streamed indexed aggregates to REST endpoints powering Power BI dashboards.</li>
+                    <li>Maintained sub-150ms latency on complex 8-way joins and reduced drilldown lag by 70%.</li>
+                </ul>
+                <div class="modal-tech">
+                    <h4 class="modal-subtitle">Tech Stack:</h4>
+                    <div class="tech-tags"><span class="tech-tag">Flask</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Power BI</span><span class="tech-tag">REST API</span><span class="tech-tag">SQLAlchemy</span><span class="tech-tag">Database Design</span><span class="tech-tag">Normalization</span></div>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/Charanbyreddy/AthleteSphere-Optimized-Sports-Analytics-DB" target="_blank" class="btn btn-outline modal-link"><i class="fab fa-github"></i> GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Fine-Grained Recognition Project Modal -->
+    <div class="modal" id="modal-finegrained">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h3 class="modal-title">Advancing Fine-Grained Recognition Through Weakly Supervised Learning</h3>
+                <p class="modal-description">This project aims to enhance fine-grain recognition by iteratively refining models and comparing their performance.</p>
+                <h4 class="modal-subtitle">Approach & Results</h4>
+                <ul>
+                    <li>Combined Grad-CAM saliency maps from CNN layers with HOG-based spatial descriptors.</li>
+                    <li>Aligned activation peaks with handcrafted signals to train an MLP classifier.</li>
+                    <li>Improved badge recognition accuracy to 92.6%.</li>
+                </ul>
+                <div class="modal-tech">
+                    <h4 class="modal-subtitle">Tech Stack:</h4>
+                    <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">CNN</span><span class="tech-tag">HOG</span><span class="tech-tag">MLP</span><span class="tech-tag">Grad-CAM</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">Computer Vision</span></div>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/Charanbyreddy/Advancing-Fine-Grained-Recognition-Through-Weakly-Supervised-Learning" target="_blank" class="btn btn-outline modal-link"><i class="fab fa-github"></i> GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Let's Connect</h3>
+                    <p class="contact-description">Looking for a skilled developer or have a project in mind? Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text"><a href="mailto:byreddysricharn9@gmail.com" class="contact-link">byreddysricharn9@gmail.com</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-text"><a href="tel:+17167091593" class="contact-link">+1-(716)-709-1593</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="contact-text"><a href="https://linkedin.com/in/sri-charan-byreddy" target="_blank" class="contact-link">LinkedIn</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-text"><a href="https://github.com/Charanbyreddy" target="_blank" class="contact-link">GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <!-- Removed action and method attributes for EmailJS -->
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="from_name" class="sr-only">Name</label>
+                            <!-- Changed name attribute to match EmailJS template -->
+                            <input type="text" id="from_name" name="from_name" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reply_to" class="sr-only">Email</label>
+                            <!-- Changed name attribute to match EmailJS template -->
+                            <input type="email" id="reply_to" name="reply_to" class="form-input" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="sr-only">Subject</label>
+                            <!-- Changed name attribute to match EmailJS template -->
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Message</label>
+                            <!-- Changed name attribute to match EmailJS template -->
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                        <p id="formMessage" style="display:none; margin-top: 1rem; padding: 0.5rem; border-radius: 4px;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">Sri Charan Byreddy</h3>
+                    <p class="footer-description">Software Engineer passionate about building robust and scalable applications.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/sri-charan-byreddy" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Charanbyreddy" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-wrapper">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#skills" class="footer-link">Skills</a></li>
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i> sricharanbyreddy@gmail.com</div>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</div>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2024 Sri Charan Byreddy. All rights reserved.</div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- Scripts -->
+    <script>
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init("uvLk63klxXhfDO5WN");
+        })();
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form message element
+            const formMessage = document.getElementById('formMessage');
+            const submitButton = document.querySelector('.form-submit');
+            const originalButtonText = submitButton.innerHTML;
+
+            // Show sending state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.disabled = true;
+
+            // Clear previous messages
+            formMessage.style.display = "none";
+            formMessage.className = ""; // Reset classes
+
+            // Send form data using EmailJS
+            emailjs.send("service_gdsih4n", "template_5gsdxts", {
+                from_name: document.getElementById('from_name').value,
+                reply_to: document.getElementById('reply_to').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            })
+            .then(function(response) {
+                // Success message
+                formMessage.textContent = "Message sent successfully! I'll get back to you soon.";
+                formMessage.style.display = "block";
+                formMessage.style.backgroundColor = "#d4edda";
+                formMessage.style.color = "#155724";
+                formMessage.style.border = "1px solid #c3e6cb";
+
+                // Reset form
+                document.getElementById('contactForm').reset();
+            }, function(error) {
+                // Error message
+                formMessage.textContent = "Failed to send message. Please try again later.";
+                formMessage.style.display = "block";
+                formMessage.style.backgroundColor = "#f8d7da";
+                formMessage.style.color = "#721c24";
+                formMessage.style.border = "1px solid #f5c6cb";
+                console.error("EmailJS Error:", error);
+            })
+            .finally(function() {
+                // Reset button state
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
