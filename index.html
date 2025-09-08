@@ -1519,93 +1519,170 @@
     </div>
 </section>
 
-  <!-- Projects Section -->
-<section id="projects" class="projects-section section">
+Okay, understood. I've re-evaluated the project descriptions and "View Details" modals with the perspective of a professional portfolio creator for a software engineer. The goal is to make the main project description compelling and the modal content rich, detailed, and professionally presented, without redundant skill listings.
+
+Here is the updated **Projects Section** HTML code:
+
+<!-- ================= Projects Section ================= -->
+<section id="projects" class="projects-section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">Featured Projects</h2>
     </div>
+
     <div class="projects-grid">
 
-      <!-- RAGCare Project -->
+      <!-- RAGCare -->
       <div class="project-card">
         <div class="project-image"><i class="fas fa-robot"></i></div>
         <div class="project-content">
-          <h3 class="project-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
-          <p class="project-description">An intelligent, document-aware chatbot leveraging Retrieval-Augmented Generation (RAG) for accurate, context-based medical assistance.</p>
+          <h3 class="project-title">RAGCare – Retrieval-Augmented Healthcare Assistant</h3>
+          <!-- Enhanced Project Card Description -->
+          <p class="project-description">
+            An intelligent healthcare chatbot leveraging Retrieval-Augmented Generation (RAG) to provide accurate, document-grounded answers to medical queries. Integrates LLMs (GPT-4, LLaMA 3) with FAISS vector search for precise, context-aware responses, demonstrating advanced AI application and full-stack development.
+          </p>
           <div class="project-tech">
-            <span class="tech-tag">Flask</span>
             <span class="tech-tag">Python</span>
-            <span class="tech-tag">RAG</span>
-            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">Flask</span>
             <span class="tech-tag">FAISS</span>
             <span class="tech-tag">SentenceTransformers</span>
+            <span class="tech-tag">LLMs</span>
           </div>
           <button class="btn btn-outline project-btn" data-modal-target="#modal-ragcare">View Details</button>
         </div>
       </div>
 
-      <div id="modal-ragcare" class="modal">
-        <div class="modal-container">
-          <button class="modal-close">&times;</button>
-          <h3 class="modal-title">RAGCare - Retrieval-Augmented Healthcare Assistant</h3>
-          <p class="modal-description">This project implements a document-aware chatbot using RAG to deliver medically accurate responses. Built using Flask, FAISS, and SentenceTransformers.</p>
+      <!-- DailyHarvest -->
+      <div class="project-card">
+        <div class="project-image"><i class="fas fa-shopping-basket"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">DailyHarvest – Grocery Delivery App</h3>
+          <!-- Enhanced Project Card Description -->
+          <p class="project-description">
+            A full-stack, responsive grocery delivery application built with React and Supabase. Features a clean UI, robust authentication, intelligent shopping cart with unit conversion, and a comprehensive admin dashboard for inventory and order management, showcasing modern web development practices.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Tailwind</span>
+            <span class="tech-tag">Zustand</span>
+          </div>
+          <button class="btn btn-outline project-btn" data-modal-target="#modal-dailyharvest">View Details</button>
         </div>
       </div>
 
-      <!-- AthleteSphere Project -->
+      <!-- MediTrack -->
       <div class="project-card">
-        <div class="project-image"><i class="fas fa-medal"></i></div>
+        <div class="project-image"><i class="fas fa-stethoscope"></i></div>
         <div class="project-content">
-          <h3 class="project-title">AthleteSphere - Sports Analytics DB</h3>
-          <p class="project-description">A BCNF-normalized PostgreSQL database for Olympic data with REST APIs and Power BI dashboards.</p>
+          <h3 class="project-title">MediTrack – Secure Medical Record Management</h3>
+          <!-- Enhanced Project Card Description -->
+          <p class="project-description">
+            A secure, role-based medical record management system developed with Spring Boot and React. Allows healthcare professionals to manage patient profiles, detailed visit histories, symptoms, and prescriptions, emphasizing secure JWT authentication, data privacy, and a well-structured backend API.
+          </p>
           <div class="project-tech">
-            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Spring Security</span>
+            <span class="tech-tag">JWT</span>
             <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Power BI</span>
-            <span class="tech-tag">REST API</span>
-            <span class="tech-tag">SQLAlchemy</span>
           </div>
-          <button class="btn btn-outline project-btn" data-modal-target="#modal-athletesphere">View Details</button>
-        </div>
-      </div>
-
-      <div id="modal-athletesphere" class="modal">
-        <div class="modal-container">
-          <button class="modal-close">&times;</button>
-          <h3 class="modal-title">AthleteSphere - Sports Analytics DB</h3>
-          <p class="modal-description">Developed a normalized sports DB system with REST API for analytics and interactive Power BI visualizations.</p>
-        </div>
-      </div>
-
-      <!-- Fine-Grained Recognition Project -->
-      <div class="project-card">
-        <div class="project-image"><i class="fas fa-eye"></i></div>
-        <div class="project-content">
-          <h3 class="project-title">Advancing Fine-Grained Recognition</h3>
-          <p class="project-description">Combined CNN saliency maps with HOG descriptors to improve badge recognition accuracy using MLP.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">CNN</span>
-            <span class="tech-tag">HOG</span>
-            <span class="tech-tag">MLP</span>
-            <span class="tech-tag">Grad-CAM</span>
-          </div>
-          <button class="btn btn-outline project-btn" data-modal-target="#modal-finegrained">View Details</button>
-        </div>
-      </div>
-
-      <div id="modal-finegrained" class="modal">
-        <div class="modal-container">
-          <button class="modal-close">&times;</button>
-          <h3 class="modal-title">Advancing Fine-Grained Recognition</h3>
-          <p class="modal-description">Implemented CNN saliency + HOG features to enhance recognition tasks using a fully connected MLP network with visualization through Grad-CAM.</p>
+          <button class="btn btn-outline project-btn" data-modal-target="#modal-meditrack">View Details</button>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- ================= Modals ================= -->
+<div id="modal-ragcare" class="modal">
+  <div class="modal-container">
+    <button class="modal-close">&times;</button>
+    <h3 class="modal-title">RAGCare – Retrieval-Augmented Healthcare Assistant</h3>
+    <p class="modal-description">
+      An intelligent healthcare chatbot designed to provide accurate, trustworthy answers to medical questions by grounding Large Language Model (LLM) responses in real medical documents. This project showcases the practical application of advanced AI techniques like Retrieval-Augmented Generation (RAG) within a full-stack web application.
+    </p>
+
+    <h4>Core Functionality & Implementation</h4>
+    <ul class="modal-list">
+      <li><strong>RAG Architecture:</strong> Implements RAG using SentenceTransformers for text embedding and FAISS for efficient vector similarity search. User queries are embedded and matched against chunks of uploaded/preloaded PDF documents to retrieve the most relevant context.</li>
+      <li><strong>LLM Integration:</strong> Seamlessly integrates with multiple LLM APIs (OpenAI GPT-4 via <code>openai</code> library, Groq LLaMA 3 via <code>requests</code>) to generate answers based on the retrieved context, offering flexibility in model choice.</li>
+      <li><strong>Document Handling:</strong> Features a backend process to ingest PDFs, split them into chunks, embed them using SentenceTransformers, and store the embeddings in a FAISS index for fast retrieval.</li>
+      <li><strong>Interactive Web UI:</strong> Built with HTML, CSS, and JavaScript, the frontend provides a user-friendly chat interface, allowing document uploads, model selection (GPT-4/Groq), dark/light mode toggle, and chat history display.</li>
+      <li><strong>Utility Features:</strong> Includes real-time display of token usage and API latency, and functionality to export the entire conversation history.</li>
+    </ul>
+
+    
+
+    <div class="modal-links">
+      <a href="https://github.com/Sricharanbyreddy9/RAGCare-Retrieval-Augmented-Healthcare-Assistant"
+         class="btn modal-link" target="_blank">
+        <i class="fab fa-github"></i> View Source on GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="modal-dailyharvest" class="modal">
+  <div class="modal-container">
+    <button class="modal-close">&times;</button>
+    <h3 class="modal-title">DailyHarvest – Grocery Delivery App</h3>
+    <p class="modal-description">
+      A modern, full-stack grocery delivery application built with React and Supabase. Designed to provide a seamless shopping experience with features for both customers and administrators, demonstrating proficiency in building scalable, user-centric web applications with robust backend services.
+    </p>
+
+    <h4>Key Features & Highlights</h4>
+    <ul class="modal-list">
+      <li><strong>Secure Authentication:</strong> Implemented user registration and login using Supabase Authentication, ensuring secure access to the application.</li>
+      <li><strong>Dynamic Product Catalog:</strong> Allows users to browse a variety of products (vegetables, fruits, meat/seafood) fetched from a Supabase PostgreSQL database, complete with images, descriptions, and pricing.</li>
+      <li><strong>Intelligent Shopping Cart:</strong> Provides add/remove functionality and quantity adjustment. Cart state is managed client-side using Zustand for responsiveness and persistence across sessions.</li>
+      <li><strong>Smart Unit Conversion:</strong> Offers flexibility by allowing users to toggle between pounds (lbs) and kilograms (kg). Prices automatically update based on the selected unit using a standard conversion factor.</li>
+      <li><strong>Order Management:</strong> Enforces a $25 minimum order requirement and provides a streamlined checkout flow, ensuring business logic is correctly handled.</li>
+      <li><strong>Admin Dashboard:</strong> A dedicated interface for administrators to perform CRUD operations on products, manage inventory levels, and view all customer orders, demonstrating role-based access control.</li>
+      <li><strong>Responsive & Accessible Design:</strong> Built with a mobile-first approach using Tailwind CSS, ensuring the application is visually appealing and fully functional across all device sizes and user preferences, including a system-aware dark/light mode toggle.</li>
+    </ul>
+
+    
+
+    <div class="modal-links">
+      <a href="https://github.com/Sricharanbyreddy9/daily-harvest-app"
+         class="btn modal-link" target="_blank">
+        <i class="fab fa-github"></i> View Source on GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="modal-meditrack" class="modal">
+  <div class="modal-container">
+    <button class="modal-close">&times;</button>
+    <h3 class="modal-title">MediTrack – Secure Medical Record Management</h3>
+    <p class="modal-description">
+      A secure medical record management system designed for clinics and hospitals. It provides a centralized digital platform for managing patient data, visit histories, symptoms, and prescriptions, emphasizing data security, integrity, and role-based access control essential for healthcare applications.
+    </p>
+
+    <h4>System Design & Security</h4>
+    <ul class="modal-list">
+      <li><strong>Secure Role-Based Access Control (RBAC):</strong> Implemented using Spring Security and JWT (JSON Web Tokens). Users authenticate securely, and their roles (Doctor or Administrator) strictly control their access to different parts of the application and API endpoints, protecting sensitive patient health information (PHI).</li>
+      <li><strong>Patient Management:</strong> Provides a central repository for patient information, including name, date of birth (with automatic age calculation), email, and phone number. Ensures accurate and easily accessible patient profiles.</li>
+      <li><strong>Comprehensive Medical Records:</strong> Allows doctors to document each patient visit in detail, including attending doctor, timestamp, reported symptoms, and prescribed treatments. Maintains a complete, chronological history for each patient, crucial for ongoing care.</li>
+      <li><strong>Reliable Backend API:</strong> Built with Java 8 and Spring Boot, providing a robust and maintainable RESTful API. Handles business logic, data processing, and integrates securely with the PostgreSQL database.</li>
+      <li><strong>Relational Database Design:</strong> Utilizes a normalized PostgreSQL schema (Users, Patients, Visits tables) to ensure data integrity, reduce redundancy, and enable efficient querying of complex relationships (e.g., retrieving a patient's full history).</li>
+      <li><strong>Modern Frontend:</strong> Developed with React and TypeScript for a responsive and type-safe user interface. Uses Tailwind CSS for styling and shadcn/ui components for a polished look, providing an intuitive experience for healthcare professionals.</li>
+    </ul>
+
+
+    <div class="modal-links">
+      <a href="https://github.com/Sricharanbyreddy9/Medical-Tracking-System"
+         class="btn modal-link" target="_blank">
+        <i class="fab fa-github"></i> View Source on GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
 
 
 <style>
