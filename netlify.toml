@@ -1,0 +1,10 @@
+[build]
+  base = ""                       # build from repo root
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+# Single Page App fallback so refresh/routes work
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
