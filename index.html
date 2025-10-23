@@ -2,27 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Sri Charan Byreddy — AI & Full-Stack Software Engineer</title>
     <meta name="description" content="AI/Full-Stack Software Engineer specializing in Java/Spring Boot, Node/React/Vue, LLMs, cloud architecture, and microservices at scale." />
     <meta name="author" content="Sri Charan Byreddy" />
+    <meta name="theme-color" content="#0b0f18" />
+    <meta name="color-scheme" content="dark light" />
 
+    <!-- Canonical (set when published) -->
+    <!-- <link rel="canonical" href="https://sricharanbyreddy9.github.io/My-Portfolio/" /> -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Sri Charan Byreddy — AI & Full-Stack Software Engineer" />
     <meta property="og:description" content="AI/Full-Stack Software Engineer specializing in Java/Spring Boot, Node/React/Vue, LLMs, cloud architecture, and microservices at scale." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="og-image.png" />
+    <meta property="og:image:alt" content="Portfolio preview of Sri Charan Byreddy" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Sri Charan Byreddy — AI & Full-Stack Software Engineer" />
+    <meta name="twitter:description" content="AI/Full-Stack Software Engineer specializing in Java/Spring Boot, Node/React/Vue, LLMs, cloud architecture, and microservices at scale." />
+    <meta name="twitter:image" content="og-image.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Favicons (files live in /public) -->
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Apply saved/system theme BEFORE paint (Tailwind uses the 'dark' class) -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');                   // 'dark' | 'light' | null
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var wantDark = stored ? stored === 'dark' : prefersDark;
+          document.documentElement.classList.toggle('dark', wantDark);  // apply class before paint
+        } catch (e) {}
+      })();
+    </script>
+
   </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Vite dev entry (relative so it works on GitHub Pages subpath too) -->
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>

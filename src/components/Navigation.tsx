@@ -1,3 +1,4 @@
+// File: src/components/Navigation.tsx
 import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,12 +8,11 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  // Initialize theme from the actual <html> class (set pre-paint in index.html)
   const [theme, setTheme] = useState<"dark" | "light">(() => {
-    // Initialize from localStorage or system preference
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("theme") as "dark" | "light" | null;
-      if (saved) return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    if (typeof document !== "undefined") {
+      return document.documentElement.classList.contains("dark") ? "dark" : "light";
     }
     return "dark";
   });
@@ -41,14 +41,21 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Persist theme whenever it changes (DOM class is toggled in toggleTheme)
   useEffect(() => {
-    // Apply theme to document and persist
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
+  // Toggle: flip <html>.classList('dark'), persist, then sync React state for icons/UI
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    const html = document.documentElement;
+    const isDark = html.classList.contains("dark");
+    html.classList.toggle("dark", !isDark);
+    const next = !isDark ? "dark" : "light";
+    localStorage.setItem("theme", next);
+    setTheme(next);
   };
 
   const scrollToSection = (id: string) => {
@@ -102,17 +109,17 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
                 {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </Button>
             </div>
 
             {/* Mobile Menu Toggle */}
             <div className="md:hidden flex items-center gap-2">
-              <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
                 {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </Button>
-              <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+              <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
                 {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
             </div>

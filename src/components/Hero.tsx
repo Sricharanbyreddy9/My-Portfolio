@@ -127,11 +127,11 @@ const Hero = () => {
           <Button
             variant="neon"
             size="lg"
-            onClick={() => window.open("https://drive.google.com/uc?export=download&id=1YourResumeID", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1Kv_iS0PrZaYGSPoeKHGi8QDXm5QkgfFp/view?usp=sharing", "_blank")}
             className="gap-2"
           >
             <Download className="w-5 h-5" />
-            Download Résumé
+            Resume
           </Button>
           <Button
             variant="glass"

@@ -2,45 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design system: HSL tokens for light and dark themes */
 
 @layer base {
+  /* ===== LIGHT THEME (default) ===== */
   :root {
-    /* Base colors - charcoal and slate */
-    --background: 240 8% 6%;
-    --foreground: 210 20% 98%;
+    /* Base (light) */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 240 8% 8%;
-    --card-foreground: 210 20% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 240 8% 10%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Neon gradient primaries - cyan to magenta */
-    --primary: 189 100% 50%;
-    --primary-foreground: 240 8% 6%;
+    /* Neon primaries (keep your cyan/magenta identity) */
+    --primary: 189 100% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 217 32% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 35%;
 
     --accent: 280 100% 50%;
-    --accent-foreground: 210 20% 98%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 189 100% 50%;
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 189 100% 45%;
 
     --radius: 1rem;
 
-    /* Neon accent colors */
+    /* Neon accents */
     --neon-cyan: 189 100% 50%;
     --neon-magenta: 328 100% 54%;
     --neon-purple: 258 90% 66%;
@@ -48,22 +47,22 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-neon: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-magenta)));
     --gradient-neon-subtle: linear-gradient(135deg, hsl(var(--neon-cyan) / 0.1), hsl(var(--neon-magenta) / 0.1));
-    
-    /* Glass effects */
-    --glass-bg: hsl(var(--card) / 0.4);
-    --glass-border: hsl(var(--border) / 0.2);
-    
-    /* Shadows and glows */
-    --shadow-glow-cyan: 0 0 40px hsl(var(--neon-cyan) / 0.3);
-    --shadow-glow-magenta: 0 0 40px hsl(var(--neon-magenta) / 0.3);
-    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    
-    /* Transitions */
+
+    /* Glass & shadows (tuned for light) */
+    --glass-bg: hsl(0 0% 100% / 0.6);
+    --glass-border: hsl(220 14% 90% / 0.7);
+
+    --shadow-glow-cyan: 0 0 30px hsl(var(--neon-cyan) / 0.25);
+    --shadow-glow-magenta: 0 0 30px hsl(var(--neon-magenta) / 0.25);
+    --shadow-glass: 0 8px 24px 0 rgba(0, 0, 0, 0.10);
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
+  /* ===== DARK THEME (activated by .dark on <html>) ===== */
   .dark {
+    /* Your original dark tokens */
     --background: 240 8% 6%;
     --foreground: 210 20% 98%;
 
@@ -91,6 +90,14 @@ All colors MUST be HSL.
     --border: 217 32% 17%;
     --input: 217 32% 17%;
     --ring: 189 100% 50%;
+
+    /* Dark glass & shadows */
+    --glass-bg: hsl(var(--card) / 0.4);
+    --glass-border: hsl(var(--border) / 0.2);
+
+    --shadow-glow-cyan: 0 0 40px hsl(var(--neon-cyan) / 0.3);
+    --shadow-glow-magenta: 0 0 40px hsl(var(--neon-magenta) / 0.3);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 }
 
@@ -127,7 +134,6 @@ All colors MUST be HSL.
   .neon-glow-hover {
     transition: var(--transition-smooth);
   }
-  
   .neon-glow-hover:hover {
     box-shadow: var(--shadow-glow-cyan);
   }
@@ -157,7 +163,6 @@ All colors MUST be HSL.
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-
   .reveal-fade-in.active {
     opacity: 1;
     transform: translateY(0);
