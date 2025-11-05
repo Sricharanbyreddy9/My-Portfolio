@@ -127,7 +127,7 @@ const Hero = () => {
           <Button
             variant="neon"
             size="lg"
-            onClick={() => window.open("https://drive.google.com/file/d/1Kv_iS0PrZaYGSPoeKHGi8QDXm5QkgfFp/view?usp=sharing", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1xWfQI8PTiEZzPOUtCGS1DwPMxkRWlc-V/view?usp=sharing", "_blank")}
             className="gap-2"
           >
             <Download className="w-5 h-5" />
