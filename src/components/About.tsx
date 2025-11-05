@@ -67,7 +67,7 @@ const About = () => {
     },
     {
       company: "Accenture",
-      role: "Software Engineer",
+      role: "Full Stack Engineer",
       period: "Jul 2020 – Jun 2022",
       description:
         "Developed fintech applications, migrated 1.2M records to PostgreSQL, built Node microservices, Vue dashboards, and implemented Kafka streaming.",
