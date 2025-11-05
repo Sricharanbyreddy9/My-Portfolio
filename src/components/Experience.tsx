@@ -18,7 +18,7 @@ const Experience = () => {
     },
     {
       company: "Accenture",
-      role: "Software Engineer",
+      role: "Full Stack Engineer",
       period: "Jul 2020 – Jun 2022",
       logo: TrendingUp,
       highlights: [
